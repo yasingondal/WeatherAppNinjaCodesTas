@@ -1,0 +1,92 @@
+[
+  {
+    "city": "New York",
+    "temperature": 18,
+    "weather": "Cloudy",
+    "humidity": 65,
+    "windSpeed": 10,
+    "description": "Partly cloudy with occasional sun",
+    "icon": "cloudy"
+  },
+  {
+    "city": "London",
+    "temperature": 12,
+    "weather": "Rainy",
+    "humidity": 80,
+    "windSpeed": 15,
+    "description": "Light rain with overcast skies",
+    "icon": "rainy"
+  },
+  {
+    "city": "Dubai",
+    "temperature": 35,
+    "weather": "Sunny",
+    "humidity": 20,
+    "windSpeed": 5,
+    "description": "Clear skies with bright sunshine",
+    "icon": "sunny"
+  },
+  {
+    "city": "Tokyo",
+    "temperature": 22,
+    "weather": "Sunny",
+    "humidity": 45,
+    "windSpeed": 8,
+    "description": "Clear and pleasant weather",
+    "icon": "sunny"
+  },
+  {
+    "city": "Paris",
+    "temperature": 16,
+    "weather": "Cloudy",
+    "humidity": 70,
+    "windSpeed": 12,
+    "description": "Overcast with light winds",
+    "icon": "cloudy"
+  },
+  {
+    "city": "Sydney",
+    "temperature": 25,
+    "weather": "Sunny",
+    "humidity": 55,
+    "windSpeed": 7,
+    "description": "Beautiful sunny day",
+    "icon": "sunny"
+  },
+  {
+    "city": "Mumbai",
+    "temperature": 28,
+    "weather": "Rainy",
+    "humidity": 85,
+    "windSpeed": 18,
+    "description": "Heavy monsoon rains",
+    "icon": "rainy"
+  },
+  {
+    "city": "Berlin",
+    "temperature": 14,
+    "weather": "Cloudy",
+    "humidity": 60,
+    "windSpeed": 9,
+    "description": "Gloomy overcast conditions",
+    "icon": "cloudy"
+  },
+  {
+    "city": "Los Angeles",
+    "temperature": 24,
+    "weather": "Sunny",
+    "humidity": 30,
+    "windSpeed": 6,
+    "description": "Perfect sunny weather",
+    "icon": "sunny"
+  },
+  {
+    "city": "Moscow",
+    "temperature": 8,
+    "weather": "Cloudy",
+    "humidity": 75,
+    "windSpeed": 14,
+    "description": "Cold and overcast",
+    "icon": "cloudy"
+  }
+]

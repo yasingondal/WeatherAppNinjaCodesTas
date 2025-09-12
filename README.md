@@ -1,79 +1,250 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Weather App 🌤️
 
-# Getting Started
+A beautiful and feature-rich weather application built with React Native, featuring modern UI design, offline capabilities, and comprehensive weather information.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## ✨ Features
 
-## Step 1: Start the Metro Server
+### 🌟 Core Features
+- **City Search**: Search for weather information by city name
+- **Recent Searches**: Quick access to previously searched cities
+- **Favorites**: Mark cities as favorites for easy access
+- **Temperature Units**: Toggle between Celsius and Fahrenheit
+- **Offline Mode**: Cached weather data for offline viewing
+- **Responsive Design**: Optimized for both iOS and Android
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### 🎨 UI/UX Features
+- **Light/Dark Theme**: Automatic theme switching based on time of day
+- **Weather-Specific Backgrounds**: Dynamic colors based on weather conditions
+- **Smooth Animations**: Beautiful transitions and loading states
+- **Pull-to-Refresh**: Swipe down to refresh weather data
+- **Modern Design**: Clean, intuitive interface following iOS/Android guidelines
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### 📱 Screens
+1. **Home Screen**: Search, recent searches, and current weather display
+2. **Favorites Screen**: Manage your favorite cities
+3. **Settings Screen**: Customize app preferences
+4. **Weather Details Screen**: Detailed weather information with animations
 
-```bash
-# using npm
-npm start
+## 🚀 Getting Started
 
-# OR using Yarn
-yarn start
+### Prerequisites
+- Node.js (>= 18)
+- React Native CLI
+- iOS Simulator (for iOS development)
+- Android Studio (for Android development)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd WeatherApp
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **iOS Setup**
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Run the app**
+   ```bash
+   # For iOS
+   npm run ios
+   
+   # For Android
+   npm run android
+   ```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── SearchBar.js
+│   ├── WeatherCard.js
+│   ├── ToggleSwitch.js
+│   ├── RecentSearches.js
+│   └── LoadingSpinner.js
+├── screens/            # App screens
+│   ├── HomeScreen.js
+│   ├── FavoritesScreen.js
+│   ├── SettingsScreen.js
+│   └── WeatherDetailsScreen.js
+├── context/            # Global state management
+│   └── WeatherContext.js
+├── services/           # API and data services
+│   └── weatherService.js
+├── utils/              # Utility functions
+│   └── helpers.js
+├── constants/          # App constants
+│   └── colors.js
+└── navigation/         # Navigation setup
+    └── AppNavigator.js
 ```
 
-## Step 2: Start your Application
+## 🛠️ Technologies Used
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- **React Native 0.75.5**: Cross-platform mobile development
+- **React Navigation**: Navigation library
+- **AsyncStorage**: Local data persistence
+- **Context API**: Global state management
+- **React Native Animatable**: Smooth animations
+- **React Native Linear Gradient**: Gradient backgrounds
 
-### For Android
+## 📊 Data Structure
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+### Weather Data Format
+```json
+{
+  "city": "New York",
+  "temperature": 18,
+  "weather": "Cloudy",
+  "humidity": 65,
+  "windSpeed": 10,
+  "description": "Partly cloudy with occasional sun",
+  "icon": "cloudy"
+}
 ```
 
-### For iOS
+## 🎯 Key Features Implementation
+
+### 1. City Search
+- Local JSON data simulation
+- Real-time search with loading states
+- Error handling for invalid cities
+- Debounced search for performance
+
+### 2. Recent Searches
+- AsyncStorage persistence
+- Optimized FlatList rendering
+- Quick access to previous searches
+- Clear all functionality
+
+### 3. Favorites Management
+- Add/remove cities from favorites
+- Persistent storage
+- Visual feedback with star icons
+- Bulk clear functionality
+
+### 4. Temperature Conversion
+- Celsius to Fahrenheit conversion
+- Global state management
+- Real-time updates across all screens
+- Formula: °F = (°C × 9/5) + 32
+
+### 5. Theme System
+- Automatic light/dark mode based on time
+- Manual theme switching
+- Weather-specific background colors
+- Consistent color scheme across app
+
+### 6. Offline Mode
+- Cached weather data
+- Network status detection
+- Graceful degradation
+- Last searched city persistence
+
+## 🎨 Design System
+
+### Colors
+- **Light Theme**: Clean whites and grays
+- **Dark Theme**: Deep blacks and grays
+- **Weather Colors**: Dynamic based on conditions
+  - Sunny: Gold (#FFD700)
+  - Cloudy: Gray (#708090)
+  - Rainy: Blue (#4169E1)
+
+### Typography
+- **Headings**: Bold, large sizes
+- **Body**: Regular, readable sizes
+- **Captions**: Small, secondary information
+
+### Spacing
+- Consistent spacing scale (4, 8, 16, 24, 32, 48, 64)
+- Responsive padding and margins
+- Proper touch targets (minimum 44pt)
+
+## 🔧 Configuration
+
+### Environment Variables
+No environment variables required - uses local JSON data.
+
+### Platform-Specific Settings
+- iOS: Configured for iOS 12+
+- Android: Configured for API level 21+
+
+## 📱 Supported Platforms
+
+- ✅ iOS 12.0+
+- ✅ Android API 21+
+- ✅ React Native 0.75.5
+
+## 🚀 Performance Optimizations
+
+1. **FlatList Optimization**: Memoized components and optimized rendering
+2. **Image Caching**: Efficient image loading and caching
+3. **State Management**: Minimal re-renders with Context API
+4. **AsyncStorage**: Efficient data persistence
+5. **Debounced Search**: Reduced API calls during typing
+
+## 🧪 Testing
 
 ```bash
-# using npm
+# Run tests
+npm test
+
+# Run linting
+npm run lint
+```
+
+## 📦 Build
+
+### iOS
+```bash
+# Debug build
 npm run ios
 
-# OR using Yarn
-yarn ios
+# Release build
+cd ios && xcodebuild -workspace WeatherApp.xcworkspace -scheme WeatherApp -configuration Release
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### Android
+```bash
+# Debug build
+npm run android
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+# Release build
+cd android && ./gradlew assembleRelease
+```
 
-## Step 3: Modifying your App
+## 🤝 Contributing
 
-Now that you have successfully run the app, let's modify it.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## 📄 License
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Congratulations! :tada:
+## 🙏 Acknowledgments
 
-You've successfully run and modified your React Native App. :partying_face:
+- React Native team for the amazing framework
+- React Navigation for smooth navigation
+- AsyncStorage for data persistence
+- All contributors and testers
 
-### Now what?
+## 📞 Support
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+For support, email support@weatherapp.com or create an issue in the repository.
 
-# Troubleshooting
+---
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Built with ❤️ using React Native**
