@@ -2,6 +2,11 @@
 
 A beautiful and feature-rich weather application built with React Native, featuring modern UI design, offline capabilities, and comprehensive weather information.
 
+#APK File Url
+
+- **Android APK URL**: https://drive.google.com/file/d/1khA90n6nGdj8hbiBnbmSON9cuoI1zXoX/view?usp=sharing
+
+
 ## ✨ Features
 
 ### 🌟 Core Features
@@ -232,7 +237,7 @@ cd android && ./gradlew assembleRelease
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT ( Muhammad Yaseen | Mobile Application Developer | TheRedHats ) License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
@@ -243,8 +248,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Support
 
-For support, email support@weatherapp.com or create an issue in the repository.
+For support, email yaseen.gondal.7866@gmail.com or create an issue in the repository.
 
 ---
-
-**Built with ❤️ using React Native**
